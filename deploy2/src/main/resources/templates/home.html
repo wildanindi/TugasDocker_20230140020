@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Data Sementara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            background-color: white;
+        }
+        .page-title {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        .content-box {
+            background-color: #f4f6f9; /* Background abu-abu muda untuk kotaknya */
+            padding: 30px;
+            border: 1px solid #eaeaea;
+            min-height: 400px; /* Biar kotaknya lumayan panjang ke bawah */
+        }
+        .content-box h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .content-box p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .link-action {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        .link-action:hover {
+            text-decoration: underline;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        td.empty-data {
+            color: #555;
+            padding: 15px;
+            background-color: #fafafa;
+        }
+        .logout-link {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="content-box">
+    <h2>MY Website 20230140020</h2>
+    <p>Selamat datang di aplikasi!</p>
+
+    <a th:href="@{/input-data}" class="link-action">+ Input Data Mahasiswa</a>
+
+    <h3>Data Mahasiswa</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Jenis Kelamin</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="4" class="empty-data">Belum ada data</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="/" class="logout-link">Logout</a>
+</div>
+
+</body>
+</html>
