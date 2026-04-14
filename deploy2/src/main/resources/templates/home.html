@@ -101,8 +101,15 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
+        <tr th:if="${#lists.isEmpty(users)}">
             <td colspan="4" class="empty-data">Belum ada data</td>
+        </tr>
+
+        <tr th:each="user, stat : ${users}">
+            <td th:text="${stat.count}">1</td>
+            <td th:text="${user.nama}">Nama Mahasiswa</td>
+            <td th:text="${user.nim}">NIM Mahasiswa</td>
+            <td th:text="${user.jenisKelamin}">Laki-laki/Perempuan</td>
         </tr>
         </tbody>
     </table>
